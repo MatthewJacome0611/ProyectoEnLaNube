@@ -1,0 +1,29 @@
+{
+  "name": "backend-productos-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API REST de productos con Express y Prisma en arquitectura por capas",
+  "main": "server.js",
+  "type": "module",
+  "engines": {
+    "node": "26.13.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "db:generate": "prisma generate",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "security:scan": "npm audit --audit-level=high"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.10.1",
+    "@prisma/client": "^7.10.1",
+    "dotenv": "^16.4.7",
+    "express": "4.22.3",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "prisma": "^7.10.1"
+  }
+}
